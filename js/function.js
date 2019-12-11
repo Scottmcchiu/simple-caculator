@@ -131,39 +131,3 @@ function displayResult(num) {
   else
     return finalResult;
 }
-
-// testing
-function testing() {
-  if (ready)
-    console.log('power on already');
-  else
-    console.log('turn it on');
-  if (numStr === '')
-    console.log('numStr is empty');
-  else
-    console.log('numStr is ' + numStr);
-  if (operator === '')
-    console.log('operator is empty');
-  else
-    console.log('operator is ' + operator);
-  if (opCount === '')
-    console.log('opCount is empty');
-  else
-    console.log('opCount is ' + opCount);
-  if (value1 === null)
-    console.log('value1 is null');
-  else
-    console.log('value1 is ' + value1);
-  if (value2 === null)
-    console.log('value2 is null');
-  else
-    console.log('value2 is ' + value2);
-  if (result === null)
-    console.log('result is null');
-  else
-    console.log('result is ' + result);
-  if (except1)
-    console.log('except1 exist');
-  if (except2)
-    console.log('except2 exist');
-}

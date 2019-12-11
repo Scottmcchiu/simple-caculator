@@ -21,13 +21,13 @@
     powerBtn.addEventListener('mouseover', function() {
       if (hasClass('span', 'off'))
         this.innerText = 'off';
-      else if (hasClass('span', 'on'))
+      else
         this.innerText = 'on';
-    }); // end mouseover
+    }, false); // end mouseover
 
     powerBtn.addEventListener('mouseout', function() {
       this.innerText = '';
-    }); // end mouseout
+    }, false); // end mouseout
 
     // power - on/off
     powerBtn.addEventListener('click', function() {
@@ -59,7 +59,7 @@
         selectELement('#button-area').classList.add('tooltip');
         ready = false;
       } // end if-else
-    }); // end click
+    }, false); // end click
     /*** end power ***/
 
 
@@ -189,7 +189,7 @@
             } // end if
 
             // result - exception2
-            if(result){
+            if (result) {
               if (!operator) {
                 opDisplaySetting(opDisplay, 'none');
                 operator = '';
@@ -201,8 +201,6 @@
                 except2 = false;
               } // end if
             }
-
-            // testing();
 
           } else {
 
@@ -235,18 +233,52 @@
               except1 = false;
               except2 = false;
             } // end if-else
-
-            // testing();
-
           } // end if-else - result
           // /*** end result ***/
 
         } // end if - power on
         /*** end limitation ***/
 
-      }); // end click - main
+      }, false); // end click - main
     } // end for - main
     /*** end main ***/
+
+
+    // testing
+    // function testing() {
+    //   if (ready)
+    //     console.log('power on already');
+    //   else
+    //     console.log('turn it on');
+    //   if (numStr === '')
+    //     console.log('numStr is empty');
+    //   else
+    //     console.log('numStr is ' + numStr);
+    //   if (operator === '')
+    //     console.log('operator is empty');
+    //   else
+    //     console.log('operator is ' + operator);
+    //   if (opCount === '')
+    //     console.log('opCount is empty');
+    //   else
+    //     console.log('opCount is ' + opCount);
+    //   if (value1 === null)
+    //     console.log('value1 is null');
+    //   else
+    //     console.log('value1 is ' + value1);
+    //   if (value2 === null)
+    //     console.log('value2 is null');
+    //   else
+    //     console.log('value2 is ' + value2);
+    //   if (result === null)
+    //     console.log('result is null');
+    //   else
+    //     console.log('result is ' + result);
+    //   if (except1)
+    //     console.log('except1 exist');
+    //   if (except2)
+    //     console.log('except2 exist');
+    // } // end testing
 
   }; //end onload
 }()); // end IIFE
